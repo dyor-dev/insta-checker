@@ -8,7 +8,7 @@ def generate_usernames():
     chars = string.ascii_lowercase + string.digits
     # Barcha 3 belgili kombinatsiyalar (36^3 = 46656)
     all_combos = [''.join(c) for c in itertools.product(chars, repeat=3)]
-    # Faqat raqamlardan iborat bo'lganlarni chiqarib tashlash (1000 ta)
+    # Faqat raqamlardan iborat boganlani chiqarib tashash (1000 ta)
     valid_usernames = [u for u in all_combos if not u.isdigit()]
     return valid_usernames
 
@@ -57,7 +57,7 @@ def main():
             res_file.write(f"{username} -> {status}\n")
             res_file.flush()
 
-            # 0.5 soniya kutish
+            # soniya kutish
             time.sleep(0.5)
 
 if __name__ == "__main__":
